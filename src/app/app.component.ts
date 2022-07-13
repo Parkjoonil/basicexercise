@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basicexercise';
+  myButtonProperty: boolean = false;
 
   myMethod() {
     return '홍길동';
