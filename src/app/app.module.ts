@@ -8,12 +8,16 @@ import { ComponentComponent } from './exercise/component/component.component';
 import { ServerComponent } from './exercise/server/server.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { SuccessComponent } from './exercise/success/success.component';
+import { FailureComponent } from './exercise/failure/failure.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponentComponent,
-    ServerComponent
+    ServerComponent,
+    SuccessComponent,
+    FailureComponent
   ],
   imports: [
     BrowserModule,
