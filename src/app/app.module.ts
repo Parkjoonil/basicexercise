@@ -8,10 +8,15 @@ import { ComponentComponent } from './exercise/component/component.component';
 import { ServerComponent } from './exercise/server/server.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatInputModule } from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs'
 import { SuccessComponent } from './exercise/success/success.component';
 import { FailureComponent } from './exercise/failure/failure.component';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './exercise/header/header.component';
+import { ShoppingListComponent } from './exercise/shopping-list/shopping-list.component';
+import { RecipesComponent } from './exercise/recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,10 @@ import { FailureComponent } from './exercise/failure/failure.component';
     ComponentComponent,
     ServerComponent,
     SuccessComponent,
-    FailureComponent
+    FailureComponent,
+    HeaderComponent,
+    ShoppingListComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,22 @@ import { FailureComponent } from './exercise/failure/failure.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTabsModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: HeaderComponent
+      },
+      {
+        path: 'shopping-list',
+        component: ShoppingListComponent
+      },
+      {
+        path: 'recipes',
+        component: RecipesComponent
+      },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
