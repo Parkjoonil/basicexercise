@@ -10,7 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatTabsModule } from '@angular/material/tabs'
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { SuccessComponent } from './exercise/success/success.component';
 import { FailureComponent } from './exercise/failure/failure.component';
 import { RouterModule } from '@angular/router';
@@ -46,6 +49,9 @@ import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.componen
     MatFormFieldModule,
     MatInputModule,
     MatTabsModule,
+    MatListModule,
+    MatCardModule,
+    MatIconModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -58,6 +64,14 @@ import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.componen
       {
         path: 'recipes',
         component: RecipesComponent
+      },
+      {
+        path: 'recipes/recipe-detail',
+        component: RecipeDetailComponent
+      },
+      {
+        path: 'recipes/recipe-list',
+        component: RecipeListComponent
       },
     ])
   ],
