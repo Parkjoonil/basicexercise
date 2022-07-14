@@ -8,6 +8,8 @@ import { ComponentComponent } from './exercise/component/component.component';
 import { ServerComponent } from './exercise/server/server.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
 import { SuccessComponent } from './exercise/success/success.component';
 import { FailureComponent } from './exercise/failure/failure.component';
 
@@ -24,7 +26,9 @@ import { FailureComponent } from './exercise/failure/failure.component';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

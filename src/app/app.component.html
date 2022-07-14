@@ -6,3 +6,11 @@
 <app-success [hidden]="mySuccessButtonProperty" id="success"></app-success>
 <button  mat-raised-button color="primary" (click)="onFailureClick()">Show Warning</button>
 <app-failure [hidden]="myFailureButtonProperty" id="failure"></app-failure>
+
+<form >
+    <mat-form-field>
+        <input matInput type="text" placeholder="Enter your name..." (keyup)="onKeyUp($event)" [(ngModel)]="inputName" name="Arguna">
+    </mat-form-field>
+</form>
+
+<p>{{ inputName }}</p>

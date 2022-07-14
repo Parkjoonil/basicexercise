@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'basicexercise';
   mySuccessButtonProperty: boolean = false;
   myFailureButtonProperty: boolean = false;
+  inputName: string = 'asdasddd';
 
 
   myMethod() {
@@ -26,6 +27,10 @@ export class AppComponent {
   callSomething() {
     console.log("I'm your father");
     
+  }
+
+  onKeyUp(event: any) {
+    this.inputName = event.target.value;
   }
 
 }
