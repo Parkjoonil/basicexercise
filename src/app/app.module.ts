@@ -18,7 +18,9 @@ import { HeaderComponent } from './exercise/header/header.component';
 import { ShoppingListComponent } from './exercise/shopping-list/shopping-list.component';
 import { RecipesComponent } from './exercise/recipes/recipes.component';
 import { ShoppingEditComponent } from './exercise/shopping-edit/shopping-edit.component';
-import { RecipesEditComponent } from './exercise/recipes-edit/recipes-edit.component';
+import { RecipeDetailComponent } from './exercise/recipe-detail/recipe-detail.component';
+import { RecipeListComponent } from './exercise/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { RecipesEditComponent } from './exercise/recipes-edit/recipes-edit.compo
     ShoppingListComponent,
     RecipesComponent,
     ShoppingEditComponent,
-    RecipesEditComponent
+    RecipeDetailComponent,
+    RecipeListComponent,
+    RecipeItemComponent,
   ],
   imports: [
     BrowserModule,
