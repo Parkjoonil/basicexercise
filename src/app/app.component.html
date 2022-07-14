@@ -1,11 +1,4 @@
 <app-server></app-server>
-<p> This is my first example of {{ myMethod() }} interpolation</p>
-
-<p [innerText]="title">asdasd</p>
-<button  mat-raised-button color="primary" (click)="onSuccessClick()">Show Success</button>
-<app-success [hidden]="mySuccessButtonProperty" id="success"></app-success>
-<button  mat-raised-button color="primary" (click)="onFailureClick()">Show Warning</button>
-<app-failure [hidden]="myFailureButtonProperty" id="failure"></app-failure>
 
 <form >
     <mat-form-field>
@@ -14,3 +7,8 @@
 </form>
 
 <p>{{ inputName }}</p>
+
+<nav mat-tab-nav-bar>
+        <a mat-tab-link *ngFor="let routeLink of routeLinks; index as i" [routerLink]="routeLink.link" [active]="activeLinkIndex === i" (click)="activeLinkIndex = i"  href="">{{ routeLink.label }}</a>
+</nav>
+<router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,17 +12,16 @@ export class AppComponent {
   myFailureButtonProperty: boolean = false;
   inputName: string = 'asdasddd';
 
+  routeLinks: any;
+  activeLinkIndex: number = 0;
 
-  myMethod() {
-    return '홍길동';
-  }
-
-  onSuccessClick() {
-    this.mySuccessButtonProperty = !this.mySuccessButtonProperty;
-  }
-
-  onFailureClick() {
-    this.myFailureButtonProperty = !this.myFailureButtonProperty;
+  constructor(
+    private router: RouterModule
+  ) {
+    this.routeLinks = [
+      { label: 'shopping-list', link: 'shopping-list' },
+      { label: 'recipes', link: 'recipes'}
+    ]
   }
 
   callSomething() {
