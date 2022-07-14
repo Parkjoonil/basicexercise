@@ -17,6 +17,8 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './exercise/header/header.component';
 import { ShoppingListComponent } from './exercise/shopping-list/shopping-list.component';
 import { RecipesComponent } from './exercise/recipes/recipes.component';
+import { ShoppingEditComponent } from './exercise/shopping-edit/shopping-edit.component';
+import { RecipesEditComponent } from './exercise/recipes-edit/recipes-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { RecipesComponent } from './exercise/recipes/recipes.component';
     FailureComponent,
     HeaderComponent,
     ShoppingListComponent,
-    RecipesComponent
+    RecipesComponent,
+    ShoppingEditComponent,
+    RecipesEditComponent
   ],
   imports: [
     BrowserModule,
