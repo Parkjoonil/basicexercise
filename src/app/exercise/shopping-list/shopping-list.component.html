@@ -1,1 +1,10 @@
-<p>shopping-list works!</p>
+<mat-nav-list>
+    <mat-list-item>
+        <a routerLink="recipe-list">Shopping Edit</a>
+    </mat-list-item>
+</mat-nav-list>
+<mat-nav-list *ngFor="let ingredient of ingredients">
+    <mat-list-item>
+        {{ ingredient.name }} : {{ ingredient.quantity }}
+    </mat-list-item>
+</mat-nav-list>
