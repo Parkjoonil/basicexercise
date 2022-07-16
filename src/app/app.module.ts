@@ -70,6 +70,10 @@ import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.componen
         component: RecipeDetailComponent
       },
       {
+        path: 'recipes/recipe-list/:id',
+        component: RecipeItemComponent
+      },
+      {
         path: 'recipes/recipe-list',
         component: RecipeListComponent
       },
