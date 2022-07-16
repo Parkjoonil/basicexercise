@@ -1,1 +1,15 @@
-<p>recipe-item works!</p>
+<mat-list>
+    <mat-card>
+        <mat-list-item>
+            <strong>{{ recipe.name }}</strong> 
+        </mat-list-item>
+        <mat-list-item>
+            {{ recipe.description }}
+            자세히 보기
+            <button mat-icon-button [routerLink]="['recipe-list',recipe.id]" (click)="showInfo(recipe.id)">
+                <mat-icon>info</mat-icon>
+            </button>
+        </mat-list-item>
+        <img [src]="recipe.imagePath" width="400" height="250" alt="">
+    </mat-card>
+</mat-list>

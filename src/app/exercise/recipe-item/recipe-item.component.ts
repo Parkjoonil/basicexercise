@@ -1,6 +1,6 @@
-import { HttpParams } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { RecipeService } from 'src/app/service/recipe/recipe.service';
+import { Recipe } from '../recipes/recipe.model';
 
 @Component({
   selector: 'app-recipe-item',
@@ -8,13 +8,27 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./recipe-item.component.scss']
 })
 export class RecipeItemComponent implements OnInit {
+  
+  @Input()
+  recipe: Recipe;
 
+  message: string;
+  
   constructor(
-   
+    private recipeService: RecipeService
   ) {
-  }
+
+   }
 
   ngOnInit(): void {
+    this.recipeService.currentMessage.subscribe(message => {
+      this.message = message;
+    })
+  }
+
+  showInfo(id: any) {
+    this.recipeService.changeMessage(id);
+    
   }
 
 }
