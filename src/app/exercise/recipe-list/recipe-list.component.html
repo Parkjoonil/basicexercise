@@ -6,7 +6,7 @@
         <mat-list-item>
             {{ recipe.description }}
             자세히 보기
-            <button mat-icon-button [routerLink]="[recipe.id]" (click)="showInfo()">
+            <button mat-icon-button [routerLink]="[recipe.id]" (click)="showInfo(recipe.id)">
                 <mat-icon>info</mat-icon>
             </button>
         </mat-list-item>

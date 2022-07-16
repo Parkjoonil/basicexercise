@@ -10,14 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 export class RecipeItemComponent implements OnInit {
 
   constructor(
-    private route: ActivatedRoute
-  ) { 
-    this.route.paramMap.subscribe(
-      res => {
-        let id = res.get('id');
-        console.log(id);
-      }
-    )
+   
+  ) {
   }
 
   ngOnInit(): void {
