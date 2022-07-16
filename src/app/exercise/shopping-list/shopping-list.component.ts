@@ -20,4 +20,14 @@ export class ShoppingListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(value: Ingredient) {
+    if (value.name !== null) {
+      console.log(value);
+      this.ingredients.push(value);
+      console.log(this.ingredients);
+    }
+    
+    
+  }
+
 }
