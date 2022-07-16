@@ -1,14 +1,15 @@
 <mat-list *ngFor="let recipe of recipes">
     <mat-card>
         <mat-list-item>
-            {{ recipe.name }}
+            <strong>{{ recipe.name }}</strong> 
         </mat-list-item>
         <mat-list-item>
             {{ recipe.description }}
+            자세히 보기
+            <button mat-icon-button (click)="showInfo()">
+                <mat-icon>info</mat-icon>
+            </button>
         </mat-list-item>
-        <button mat-icon-button (click)="showInfo()">
-            <mat-icon>info</mat-icon>
-        </button>
-        <img [src]="recipe.imagePath" alt="">
+        <img [src]="recipe.imagePath" width="400" height="250" alt="">
     </mat-card>
 </mat-list>
