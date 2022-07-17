@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from 'src/app/service/account/account.service';
 import { Account } from './account.model';
 
 @Component({
@@ -8,30 +9,24 @@ import { Account } from './account.model';
 })
 export class AccountComponent implements OnInit {
 
-  accounts: Account[] = [
-
-  ];
+  accounts: Account[] = [];
   status: string = 'Active';
 
-  constructor() { }
+  constructor(
+    private accountService: AccountService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(
+  ): void {
+    this.accounts = this.accountService.accounts;
   }
 
   addAccount(value: Account) {
-    let account = value;
-    account.status = 'Active';
-    this.accounts.push(value);
-    console.log(value);
+    this.accountService.addAccount(value);
   }
 
   statusReset(i) {
-    if(this.accounts[i].status === 'Active') {
-      this.accounts[i].status = 'Inactive';
-    } else {
-      this.accounts[i].status = 'Active';
-    }
-    
+    this.accountService.statusReset(i);
   }
 
 }

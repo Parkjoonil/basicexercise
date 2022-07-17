@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { SuccessComponent } from './exercise/success/success.component';
 import { FailureComponent } from './exercise/failure/failure.component';
 import { RouterModule } from '@angular/router';
@@ -28,6 +29,7 @@ import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.componen
 import { RecipeService } from './service/recipe/recipe.service';
 import { AccountComponent } from './exercise/account/account.component';
 import { NewAccountComponent } from './exercise/account/new-account/new-account.component';
+import { AccountService } from './service/account/account.service';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,7 @@ import { NewAccountComponent } from './exercise/account/new-account/new-account.
     MatCardModule,
     MatIconModule,
     MatDividerModule,
+    MatExpansionModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -95,7 +98,8 @@ import { NewAccountComponent } from './exercise/account/new-account/new-account.
     ])
   ],
   providers: [
-    RecipeService
+    RecipeService,
+    AccountService
   ],
   bootstrap: [AppComponent]
 })
