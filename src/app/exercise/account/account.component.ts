@@ -10,7 +10,10 @@ import { Account } from './account.model';
 export class AccountComponent implements OnInit {
 
   accounts: Account[] = [];
+
   status: string = 'Active';
+
+  newAccount: boolean = false;
 
   constructor(
     private accountService: AccountService
@@ -23,6 +26,7 @@ export class AccountComponent implements OnInit {
 
   addAccount(value: Account) {
     this.accountService.addAccount(value);
+    this.newAccount = false;
   }
 
   statusReset(i) {

@@ -1,4 +1,6 @@
-<app-new-account (newAccount)="addAccount($event)"></app-new-account>
+<button mat-raised-button color="primary" (click)="newAccount = true">Add New Account</button>
+
+<app-new-account *ngIf="newAccount" (newAccount)="addAccount($event)"></app-new-account>
 
 <h3>Active Users</h3>
 <mat-nav-list *ngFor="let account of accounts index as i">
