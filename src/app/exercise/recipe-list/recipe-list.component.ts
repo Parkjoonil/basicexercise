@@ -14,6 +14,7 @@ export class RecipeListComponent implements OnInit {
     new Recipe(2, '짬뽕', '밀가루를 반죽하고, 면을 뽑아, 짬뽕 국물에...', 'https://t1.daumcdn.net/cfile/tistory/99D4B04E5C5D20A02D')
   ];
   message: string = '';
+  recipeInList: number;
 
   constructor(
     private recipeService: RecipeService
@@ -33,5 +34,11 @@ export class RecipeListComponent implements OnInit {
     this.recipeService.changeMessage(id);
     
   }
+
+  onRecipeSelected(event: number) {
+    this.recipeInList = event;
+    
+  }
+
 
 }
