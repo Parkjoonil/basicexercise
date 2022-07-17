@@ -14,6 +14,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 import { SuccessComponent } from './exercise/success/success.component';
 import { FailureComponent } from './exercise/failure/failure.component';
 import { RouterModule } from '@angular/router';
@@ -57,6 +58,7 @@ import { NewAccountComponent } from './exercise/account/new-account/new-account.
     MatListModule,
     MatCardModule,
     MatIconModule,
+    MatDividerModule,
     RouterModule.forRoot([
       {
         path: '',

@@ -1,1 +1,18 @@
-<button mat-raised-button color="primary" [routerLink]="'new-account'">New Account</button>
+<app-new-account (newAccount)="addAccount($event)"></app-new-account>
+
+<mat-nav-list *ngFor="let account of accounts index as i">
+    <mat-list-item>
+        <p style="font-size: 14pt" class="example-full-width">
+            {{ account.name }}
+        </p>
+        <p style="font-size: 14pt" class="example-full-width">
+            {{ account.email }}
+        </p>
+        <p style="font-size: 14pt" class="example-full-width">
+            {{ account.tel }}
+        </p>
+        <span flex></span>
+        <button mat-raised-button (click)="statusReset(i)">{{ account.status }}</button>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+</mat-nav-list>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-new-account',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewAccountComponent implements OnInit {
 
+  @Output()
+  newAccount = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(value) {
+    this.newAccount.emit(value);
   }
 
 }
