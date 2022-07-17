@@ -1,0 +1,39 @@
+<button mat-raised-button color="primary" (click)="newAccount = true">Add New Account</button>
+
+<app-new-account *ngIf="newAccount" (newAccount)="addAccount($event)"></app-new-account>
+
+<h3>Active Users</h3>
+<mat-nav-list *ngFor="let account of accounts index as i">
+    <mat-list-item *ngIf="account.status === 'Active'">
+        <p style="font-size: 14pt" class="example-full-width">
+            {{ account.name }}
+        </p>
+        <p style="font-size: 14pt" class="example-full-width">
+            {{ account.email }}
+        </p>
+        <p style="font-size: 14pt" class="example-full-width">
+            {{ account.tel }}
+        </p>
+        <span flex></span>
+        <button mat-raised-button (click)="statusReset(i)">{{ account.status }}</button>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+</mat-nav-list>
+
+<h3>Inactive Users</h3>
+<mat-nav-list *ngFor="let account of accounts index as i">
+    <mat-list-item *ngIf="account.status === 'Inactive'">
+        <p style="font-size: 14pt" class="example-full-width">
+            {{ account.name }}
+        </p>
+        <p style="font-size: 14pt" class="example-full-width">
+            {{ account.email }}
+        </p>
+        <p style="font-size: 14pt" class="example-full-width">
+            {{ account.tel }}
+        </p>
+        <span flex></span>
+        <button mat-raised-button (click)="statusReset(i)">{{ account.status }}</button>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+</mat-nav-list>

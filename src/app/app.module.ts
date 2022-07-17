@@ -10,7 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatTabsModule } from '@angular/material/tabs'
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { SuccessComponent } from './exercise/success/success.component';
 import { FailureComponent } from './exercise/failure/failure.component';
 import { RouterModule } from '@angular/router';
@@ -21,6 +26,10 @@ import { ShoppingEditComponent } from './exercise/shopping-edit/shopping-edit.co
 import { RecipeDetailComponent } from './exercise/recipe-detail/recipe-detail.component';
 import { RecipeListComponent } from './exercise/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.component';
+import { RecipeService } from './service/recipe/recipe.service';
+import { AccountComponent } from './exercise/account/account.component';
+import { NewAccountComponent } from './exercise/account/new-account/new-account.component';
+import { AccountService } from './service/account/account.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +45,8 @@ import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.componen
     RecipeDetailComponent,
     RecipeListComponent,
     RecipeItemComponent,
+    AccountComponent,
+    NewAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +57,11 @@ import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.componen
     MatFormFieldModule,
     MatInputModule,
     MatTabsModule,
+    MatListModule,
+    MatCardModule,
+    MatIconModule,
+    MatDividerModule,
+    MatExpansionModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -59,9 +75,32 @@ import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.componen
         path: 'recipes',
         component: RecipesComponent
       },
+      {
+        path: 'recipes/recipe-detail',
+        component: RecipeDetailComponent
+      },
+      {
+        path: 'recipes/recipe-list/:id',
+        component: RecipeItemComponent
+      },
+      {
+        path: 'recipes/recipe-list',
+        component: RecipeListComponent
+      },
+      {
+        path: 'account',
+        component: AccountComponent
+      },
+      {
+        path: 'account/new-account',
+        component: NewAccountComponent
+      },
     ])
   ],
-  providers: [],
+  providers: [
+    RecipeService,
+    AccountService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

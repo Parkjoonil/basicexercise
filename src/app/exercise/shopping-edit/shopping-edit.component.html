@@ -1,1 +1,12 @@
-<p>shopping-edit works!</p>
+<form #f="ngForm" >
+    <mat-form-field>
+        <input name="name" ngModel matInput type="text" placeholder="Name">
+    </mat-form-field>
+    <mat-form-field>
+        <input name="quantity" ngModel matInput type="text" placeholder="Quantity">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Add</button>
+    <button mat-raised-button>Clear</button>
+</form>
+
+<pre> {{ f.value | json }}</pre>
