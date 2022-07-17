@@ -19,8 +19,9 @@ export class AppComponent {
     private router: RouterModule
   ) {
     this.routeLinks = [
-      { label: 'shopping-list', link: 'shopping-list' },
-      { label: 'recipes', link: 'recipes'}
+      { label: 'Shopping-List', link: 'shopping-list' },
+      { label: 'Recipes', link: 'recipes'},
+      { label: 'Account', link: 'account'},
     ]
   }
 

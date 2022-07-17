@@ -82,6 +82,14 @@ import { NewAccountComponent } from './exercise/account/new-account/new-account.
         path: 'recipes/recipe-list',
         component: RecipeListComponent
       },
+      {
+        path: 'account',
+        component: AccountComponent
+      },
+      {
+        path: 'account/new-account',
+        component: NewAccountComponent
+      },
     ])
   ],
   providers: [
