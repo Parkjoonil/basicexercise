@@ -25,6 +25,8 @@ import { RecipeDetailComponent } from './exercise/recipe-detail/recipe-detail.co
 import { RecipeListComponent } from './exercise/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './exercise/recipe-item/recipe-item.component';
 import { RecipeService } from './service/recipe/recipe.service';
+import { AccountComponent } from './exercise/account/account.component';
+import { NewAccountComponent } from './exercise/account/new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { RecipeService } from './service/recipe/recipe.service';
     RecipeDetailComponent,
     RecipeListComponent,
     RecipeItemComponent,
+    AccountComponent,
+    NewAccountComponent,
   ],
   imports: [
     BrowserModule,
