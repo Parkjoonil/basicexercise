@@ -1,20 +1,28 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
+about: Feat
+title: "[FEAT]"
 labels: ''
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+---
+name: 새로운 기능 추가
+about: '프로젝트에 필요한 새로운 기능을 제안할 때 사용한다. '
+title: "[FEAT]"
+labels: ''
+assignees: ''
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+---
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## Background
+-
+-
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## To Do
+- [ ] 
+- [ ]
+
+## See Also
+-
